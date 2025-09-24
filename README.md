@@ -1,63 +1,80 @@
-Hepatitis C Virus (HCV) Liver Function Analysis 🩺
-This repository contains the analysis of liver function biomarkers in patients with the Hepatitis C Virus (HCV). The study focuses on Alanine Aminotransferase (ALT) levels to assess liver health variability across different demographic and clinical groups. This project was conducted as part of the course 
+# 🩺 Hepatitis C Virus (HCV) Liver Function Analysis
 
-21AIC401T Inferential Statistics and Predictive Analytics. 
+This repository contains the analysis of liver function biomarkers in patients with the Hepatitis C Virus (HCV).  
+The study focuses on **Alanine Aminotransferase (ALT)** levels to assess liver health variability across different demographic and clinical groups.  
 
-📝 Abstract
-This study uses a publicly available dataset to perform an inferential analysis on liver function in HCV patients. We conducted several statistical hypothesis tests—one-sample, two-sample, and one-way ANOVA—to evaluate differences in ALT levels. The findings provide insights into liver health patterns in this patient cohort, which can help guide personalized clinical monitoring. 
+This project was conducted as part of the course:  
+**21AIC401T – Inferential Statistics and Predictive Analytics**
 
+---
 
+## 📝 Abstract
+This study uses a publicly available dataset to perform an **inferential analysis** on liver function in HCV patients.  
+We conducted several statistical hypothesis tests—**one-sample, two-sample, and one-way ANOVA**—to evaluate differences in ALT levels.  
 
-📊 Dataset & Methodology
+The findings provide insights into liver health patterns in this patient cohort, which can help guide personalized clinical monitoring.
 
-Dataset: A publicly available HCV dataset (hevdat0.csv) with a sample size of 615 patients. 
+---
 
+## 📊 Dataset & Methodology
 
-Variables: The primary variable of interest is ALT. Other variables considered include 
+- **Dataset**: A publicly available HCV dataset (`hcvdat0.csv`) with a sample size of **615 patients**.  
+- **Primary Variable**: `ALT`  
+- **Other Variables**: `AST`, `Bilirubin`, `Albumin`, `Sex`, `Age`, and `Clinical Category`  
 
-AST, Bilirubin, Albumin, Sex, Age, and Clinical Category. 
+### Clinical Categories
+Patients were classified into five distinct groups:
+- Blood Donor  
+- Suspect Blood Donor  
+- Hepatitis  
+- Fibrosis  
+- Cirrhosis  
 
+### Statistical Tests
+1. **One-Sample t-test** → Compare mean ALT against reference value of 30 IU/L  
+2. **Two-Sample t-test** → Compare mean ALT between male and female patients  
+3. **One-way ANOVA** → Assess differences in mean ALT across the five clinical categories  
+4. **Post-hoc Tukey HSD** → Identify specific category pairs with significant differences  
 
-Clinical Categories: Patients were classified into five distinct groups: Blood Donor, Suspect Blood Donor, Hepatitis, Fibrosis, and Cirrhosis. 
+---
 
-Statistical Tests:
+## 🛠️ Tools & Libraries Used
+- **Python**
+  - pandas → Data manipulation & cleaning  
+  - numpy → Numerical computations  
+  - matplotlib → Data visualization  
+  - seaborn → Statistical visualization  
+  - scipy → Hypothesis testing  
+  - statsmodels → ANOVA & post-hoc analysis  
 
+---
 
-One-Sample t-test: To compare the mean ALT of the cohort against a reference value of 30 IU/L. 
+## 📈 Key Findings
 
+- **One-Sample Test**  
+  - Mean ALT = **28.45 IU/L**  
+  - Not significantly different from reference value 30 IU/L *(p = 0.1323)*  
+  - Suggests ALT levels are within normal clinical limits on average  
 
-Two-Sample t-test: To compare the mean ALT between male and female patients. 
+- **Two-Sample Test**  
+  - Significant difference between sexes *(p = 0.0001)*  
+  - Males: **31.73 IU/L** vs Females: **23.27 IU/L**  
 
+- **One-way ANOVA**  
+  - Significant variation across categories *(F = 27.63, p < 0.0001)*  
+  - Confirms ALT as a useful biomarker for monitoring disease progression  
 
-One-way ANOVA: To assess differences in mean ALT across the five clinical categories. 
+- **Post-hoc Tukey HSD**  
+  - Patients with **Fibrosis & Cirrhosis** had significantly higher ALT levels than **Blood Donors**  
 
+---
 
-Post-hoc Tukey HSD: To identify specific pairs of categories with significant differences following the ANOVA test. 
+## ⚠️ Limitations
 
-📈 Key Findings
+- Missing numeric values were imputed with the column mean → may introduce slight bias  
+- Focused primarily on **ALT**, other biomarkers (AST, Bilirubin, Albumin) not explored in depth  
+- Some categories had smaller sample sizes → may affect statistical power & generalizability  
 
-One-Sample Test: The mean ALT for the cohort (28.45 IU/L) was not significantly different from the reference value of 30 IU/L (p=0.1323). This suggests that, on average, ALT levels in this group are within normal clinical limits. 
+---
 
-
-
-
-Two-Sample Test: A significant difference in ALT levels was found between sexes (p=0.0001). The mean ALT for 
-
-
-males (31.73 IU/L) was significantly higher than for females (23.27 IU/L). 
-
-
-
-One-way ANOVA: There was a significant variation in ALT levels across the different clinical categories (F=27.63,p<0.0001). This confirms that ALT is a valuable biomarker for monitoring liver health as the disease progresses. 
-
-
-
-Post-hoc Test: The Tukey HSD test revealed significant differences between several group pairs, notably showing that patients with advanced liver damage (Fibrosis and Cirrhosis) had notably higher ALT levels compared to healthy individuals (Blood Donors). 
-
-
-⚠️ Limitations
-Missing numeric values were imputed with the column mean, which may introduce slight bias. 
-
-The analysis focused primarily on ALT, while other liver biomarkers were not explored in depth. 
-
-Some clinical categories had smaller sample sizes, which could affect the statistical power and generalizability of the findings for those specific groups. 
+## 📂 Repository Structure
