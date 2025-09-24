@@ -6,7 +6,7 @@ The study focuses on **Alanine Aminotransferase (ALT)** levels to assess liver h
 This project was conducted as part of the course:  
 **21AIC401T – Inferential Statistics and Predictive Analytics**
 
----
+
 
 ## 📝 Abstract
 This study uses a publicly available dataset to perform an **inferential analysis** on liver function in HCV patients.  
@@ -14,7 +14,7 @@ We conducted several statistical hypothesis tests—**one-sample, two-sample, an
 
 The findings provide insights into liver health patterns in this patient cohort, which can help guide personalized clinical monitoring.
 
----
+
 
 ## 📊 Dataset & Methodology
 
@@ -36,7 +36,7 @@ Patients were classified into five distinct groups:
 3. **One-way ANOVA** → Assess differences in mean ALT across the five clinical categories  
 4. **Post-hoc Tukey HSD** → Identify specific category pairs with significant differences  
 
----
+
 
 ## 🛠️ Tools & Libraries Used
 - **Python**
@@ -47,7 +47,7 @@ Patients were classified into five distinct groups:
   - scipy → Hypothesis testing  
   - statsmodels → ANOVA & post-hoc analysis  
 
----
+
 
 ## 📈 Key Findings
 
@@ -67,12 +67,10 @@ Patients were classified into five distinct groups:
 - **Post-hoc Tukey HSD**  
   - Patients with **Fibrosis & Cirrhosis** had significantly higher ALT levels than **Blood Donors**  
 
----
+
 
 ## ⚠️ Limitations
 
 - Missing numeric values were imputed with the column mean → may introduce slight bias  
 - Focused primarily on **ALT**, other biomarkers (AST, Bilirubin, Albumin) not explored in depth  
 - Some categories had smaller sample sizes → may affect statistical power & generalizability  
-
----
